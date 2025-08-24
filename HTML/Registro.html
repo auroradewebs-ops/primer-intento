@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <!--HTML semantico-->
+    <!--
+    Header: Cabecera
+    Nav: Barra de navegacion
+    Aside: Contenido latteral
+    Section: seccion de una pagina
+    Main: Contenido principal de la web
+    Footer: Pie de pagina //
+    Article: Articulo independiente
+    -->
+    <nav>
+        <div>
+            <p>Logo</p>
+            <img width="260px" src="https://i.pinimg.com/736x/b2/9a/64/b29a64c1fc3f9b64ec483570a85444e2.jpg" alt="">
+        </div>
+        <div>
+            <p>opcion</p>
+            <p>opcion</p>
+            <p>opcion</p>
+        </div>
+    </nav>
+
+    <main>
+     <aside>
+        <header>
+            <h3>Contenido lateral</h3>
+            <div>
+                <p>Contenido adicional</p>
+            </div>
+        </header>
+    </aside>
+
+        <header>
+            <p>Logo</p>
+            <h1>Registro</h1>
+            <p>Bienvenido a registro</p>
+        </header>
+
+        <section>
+            <h2>Fomulario de registro</h2>
+            <form action="">
+               <div style="background-color: violet;">
+                    <label for="nombre"> Nombre: </label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <br />
+               </div>
+               <div>
+                    <label for="email"> Email: </label>
+                    <input type="email" id="email" name="email" required>
+                    <br />
+               </div>
+               <div>
+                    <label for="password">Contrasena:</label>
+                    <input type="password" id="password" name="password" required>
+                    <br />
+               </div>
+                <div>
+                    <button type="submit">Registrar</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h2>Otro contenido</h2>
+            <article>
+                <p>informacion adicional</p>
+                <!--Aqui abajo hay un video-->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NKUIAOD8P_A?si=X6FmAn700ThQGr15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>Derechos reservados</p>
+        </div>
+        <div>
+            <p>Politica de privacidad</p>
+        </div>
+        <div>
+            <p>Terminos y condiciones</p>
+        </div>
+    </footer>
+</body>
+</html>
