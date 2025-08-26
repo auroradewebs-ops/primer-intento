@@ -1,0 +1,15 @@
+/*Barra de navegacion
+
+nav div selcciona todos los div dentro de nav
+nav > div selecciona solo los hijos directos de nav*/
+
+nav {
+    background-color: #fb607f;
+    color: white;
+    font-size: 25px;
+    display: flex;
+}
+
+nav div{
+    display: flex;
+}
