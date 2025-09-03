@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /*Barra de navegacion
 
 nav div selcciona todos los div dentro de nav
@@ -8,8 +13,59 @@ nav {
     color: white;
     font-size: 25px;
     display: flex;
+    /*Eje principal, solo se puede utilizar si el
+    elemnto es flex*/
+    justify-content: space-between;
+    /*Eje secundario*/
+    align-items: center;
+    /*Distancia entre el borde de la caja y su contenido*/
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
 }
 
 nav div{
     display: flex;
+    /* Espaciado entre elementos de filas o columnas*/
+    gap: 20px;
 }
+
+nav div a:visited, nav div a:link{
+    color: white;
+    text-decoration: none;
+}
+
+.enlace:hover {
+    color: #6e1f2f;
+}
+
+nav div img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 0;
+}
+/*#Inicio:hover, #Introduccion:hover {
+    color: rgb(155, 40, 40);
+} */
+/*Lo elimino para usar una propiedad de flex que me ahorra este codigo
+nav div a {
+    margin: 0 20px;
+} */
+.contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+}
+
+.contenido img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.texto {
+    color: #6e1f2f;
+    font-size: 25px;
+}
+
