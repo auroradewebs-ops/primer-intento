@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
+/*En caso de querer usar variables
+:root{
+  --color-principal: #38181e;
+  --color-secundario: #ffffff;
+  --color-principal: #ffbecb;
+  --texto: 20px
+}
+*/
+
 *{
     margin: 0;
     padding: 0;
@@ -32,14 +41,15 @@ nav div{
     gap: 20px;
 }
 
-nav div a:visited, nav div a:link{
+nav div a:visited, nav div a:link {
     color: white;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .enlace:hover {
-    color: #e74566;
+  color: #e74566;
+  cursor: pointer;
 }
 
 nav div img{
@@ -164,6 +174,10 @@ header h2 {
     color: rgb(255, 255, 255);
     text-align: center;
     font-weight: 300;
+}
+
+p, h1, h2, h3, h4, h5 {
+  cursor: default;
 }
 
 /* Boton bonito que saque de internet(inicio)*/
