@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    z-index: 10;
+}
+
+/*Barra de navegacion
+
+nav div selcciona todos los div dentro de nav
+nav > div selecciona solo los hijos directos de nav*/
+
+nav {
+    background-color: #38181e;
+    color: white;
+    font-size: 23px;
+    display: flex;
+    /*Eje principal, solo se puede utilizar si el
+    elemnto es flex*/
+    justify-content: space-between;
+    /*Eje secundario*/
+    align-items: center;
+    /*Distancia entre el borde de la caja y su contenido*/
+    padding: 20px;
+}
+
+nav div{
+    display: flex;
+    /* Espaciado entre elementos de filas o columnas*/
+    gap: 20px;
+}
+
+nav div a:visited, nav div a:link{
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.enlace:hover {
+    color: #e74566;
+}
+
+nav div img{
+    height: 50px;
+    object-fit: cover;
+    object-position: 0 25%;
+    border-radius: 10%;
+    padding: 0;
+}
+/*#Inicio:hover, #Introduccion:hover {
+    color: rgb(155, 40, 40);
+} */
+/*Lo elimino para usar una propiedad de flex que me ahorra este codigo
+nav div a {
+    margin: 0 20px;
+} */
+.contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+}
+
+.contenido img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.texto {
+    color: #6e1f2f;
+    font-size: 25px;
+}
+
+main {
+    background-color: #ffbecb;
+    background-image: linear-gradient(to right, #772c3b, #fb607f );
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+/*
+GRID es un tipo de display que permite
+manejar un sistema de filas y columnas
+*/
+
+header{
+    height: 70vh;
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 25px;
+    /*pricipal*/
+    justify-items: center;
+    /*secundario*/
+    align-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* Los pseudoelementos permiten seleccionar partes de un elemento */
+
+/* Posotion es una propiedad que permite encajar la posiocion
+de un elemento
+static: posicion normal al elemento padre
+relative: // relativa // (puedes moverlo)
+absolute: // absoluta //(puedes moverlo)
+fixed: // fija en el viewport (pantalla) (se queda fijo en la pantalla)
+sticky: posicion fija al scroll (tiene un espacio en el html, pero se queda fijo)
+*/
+
+header::before{
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-abstracto-textura-vidrio-patrones_53876-132969.jpg?t=st=1757679891~exp=1757683491~hmac=0cdfdaaa9ac71b004dbd0a98f7908c0852b3c537ca76cf5ad0639c45cffed9b3&w=1060);
+    background-size: cover;
+    background-position: center;
+    content: "";
+    position: absolute;
+    opacity: 0.2;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 25px;
+    border: 2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 3px 5px;
+}
+
+header > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+header > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+h1 {
+    font-size: 50px;
+    color: rgb(143, 34, 34);
+    text-align: center;
+    text-shadow: 2px 2px 5px #ffbecb;
+}
+
+header h2 {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.contenido h2 {
+    color: #6e1f2f;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.info {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 300;
+}
+
+/* Boton bonito que saque de internet(inicio)*/
+
+/* From Uiverse.io by StealthWorm */ 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  cursor: pointer;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),
+    linear-gradient(
+      137.48deg,
+      #ffdb3b 10%,
+      #fe53bb 45%,
+      #8f51ea 67%,
+      #0044ff 87%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+strong {
+  z-index: 2;
+  font-family: "Avalors Personal Use";
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: 0 0 4px white;
+}
+
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:active {
+  border: double 4px #fe53bb;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.btn:active .circle {
+  background: #fe53bb;
+}
+
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Boton bonito que saque de internet (final)*/
+
+/*animacion*/
+
+.gradient-background {
+  background: linear-gradient(300deg,#b42743,#ff7994,#b42743);
+  background-size: 180% 180%;
+  animation: gradient-animation 9s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
