@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-/*En caso de querer usar variables
+/*En caso de querer usar variables*/
 :root{
   --color-principal: #38181e;
   --color-secundario: #ffffff;
   --color-principal: #ffbecb;
-  --texto: 20px
+  --texto: 20px;
+  --titulares: 3rem;
 }
-*/
 
 *{
     margin: 0;
@@ -42,7 +42,7 @@ nav div{
 }
 
 nav div a:visited, nav div a:link {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -77,6 +77,7 @@ nav div a {
     width: 300px;
     height: 300px;
     object-fit: cover;
+    padding: 30px;
 }
 .texto {
     color: #6e1f2f;
@@ -98,9 +99,9 @@ manejar un sistema de filas y columnas
 
 header{
     height: 70vh;
-    min-height: 70vh;
+    min-height: 700px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     border-radius: 25px;
     /*pricipal*/
     justify-items: center;
@@ -138,6 +139,10 @@ header::before{
     box-shadow: rgba(0, 0, 0, 0.9) 0px 3px 5px;
 }
 
+.menu-responsive {
+  display: none;
+}
+
 header > div{
     display: flex;
     flex-direction: column;
@@ -153,7 +158,7 @@ header > div > div {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: var(--titulares);
     color: rgb(143, 34, 34);
     text-align: center;
     text-shadow: 2px 2px 5px #ffbecb;
@@ -178,6 +183,15 @@ header h2 {
 
 p, h1, h2, h3, h4, h5 {
   cursor: default;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #f191be;
+  color: rgb(61, 9, 9);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Boton bonito que saque de internet(inicio)*/
@@ -381,3 +395,33 @@ strong {
     background-position: 0% 50%;
   }
 }
+
+/*responsive*/
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {}*/
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  header{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-responsive {
+    display: flex;
+  }
+  .menu-movil {
+    display: none;
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+
+} */ 
