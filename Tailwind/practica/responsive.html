@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <h1 class="text-3xl text-center text-blue-500 font-semibold">
+        Hola 
+        <span class="lg:hidden">En telefono</span> 
+        <span class="hidden lg:inline">En computadora</span>
+    </h1>
+    <div class="flex flex-col lg:flex-row items-center justify-center h-screen">
+        <p>Texto</p>
+        <p>Con orientación que cambia</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4">
+        <p>Columna 1</p>
+        <p>Columna 2</p>
+        <p>Columna 3</p>
+    </div>
+</body>
+</html>
